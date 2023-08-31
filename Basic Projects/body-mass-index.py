@@ -15,11 +15,11 @@ def vucut_kitle_indeksi():
 
     if (hesapSonucu < 18.5):
         print(f"Sonuç: {hesapSonucu} - Yani 'ZAYIFSINIZ!!!'")
-    elif (hesapSonucu >= 18.5) and (hesapSonucu < 25):
+    elif hesapSonucu < 25:
         print(f"Sonuç: {hesapSonucu} - Yani 'NORMALSİNİZ!!!'")
-    elif (hesapSonucu >= 25) and (hesapSonucu < 30):
+    elif hesapSonucu < 30:
         print(f"Sonuç: {hesapSonucu} - Yani 'KİLOLUSUNUZ!!!'")
-    elif (hesapSonucu >= 30):
+    else:
         print(f"Sonuç: {hesapSonucu} - Yani 'AŞIRI KİLOLUSUNUZ!!!'")
 
 

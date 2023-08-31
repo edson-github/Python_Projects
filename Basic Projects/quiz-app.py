@@ -16,13 +16,11 @@ class Question:
         self.answer = _answer
 
     def check_answer(self):
-        if (userAnswer == self.answer):
-            Question.numberOfCorrectQuestions += 1
-            Question.numberOfQuestions += 1 
-            return f"Tebrikler cevabınız doğru, cevap {self.answer}'idi."
-        else:
-            Question.numberOfQuestions += 1 
+        Question.numberOfQuestions += 1
+        if userAnswer != self.answer:
             return f"Üzgünüz cevabınız doğru değil, cevap {self.answer}'idi."
+        Question.numberOfCorrectQuestions += 1
+        return f"Tebrikler cevabınız doğru, cevap {self.answer}'idi."
 
 question1 = Question("1) RAM bellek için aşağıdakilerden hangisi söylenemez?", ["a) Bilgilerin geçici olarak tutulduğu bellektir.", "b) RAM bellek üzerinde o an çalışan programların bilgileri yer alır.", "c) Elektrik kesildiğinde RAM bellek üzerindeki bilgiler silinir.", "d) RAM bellek aynı zamanda yardımcı bellek olarak adlandırılır."], "d")
 question2 = Question("2) Aşağıdakilerden hangisi işletim sisteminin bir özelliği değildir?", ["a) Bilgisayar kapandıktan sonra da çalışarak bilgisayarı uyanık tutmak", "b) Bilgisayar donanımı ile kullanıcı arasındaki iletişimi sağlamak", "c) Çevre birimleri ile işlemci arasındaki ilişkileri düzenlemek#", "d) Bilgisayarın fiziksel yapısını kullanıma hazırlamak"], "a")
